@@ -1,0 +1,28 @@
+.input {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+label {
+    font-size: 12px;
+    line-height: 15px;
+    color: #21092F;
+    margin-bottom: 9px;
+    text-align: start;
+}
+
+input {
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #DFDEE0;
+    border-radius: 8px;
+    font-size: 18px;
+    line-height: 23px;
+    color: #21092F;
+    mix-blend-mode: normal;
+    opacity: 0.25;
+    padding: 11px 16px;
+    margin-bottom: 26px;
+    text-transform: none;
+}

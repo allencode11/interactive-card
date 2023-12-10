@@ -1,12 +1,18 @@
 import './App.css';
 import img from './assets/images/text.png';
 import { BtnComponent } from './components/btn/btn.component';
+import { InputComponent } from './components/input/input.component';
 
 function App() {
 
   const onBtnClick = () => {
     console.log('click');
-  }
+  };
+
+  const onInputClick = () => {
+    console.log('click');
+  };
+
   return (
     <div className='App'>
       <div className='gradient-img mask'>
@@ -35,6 +41,9 @@ function App() {
       </div>
 
       <div className='input-data'>
+        <InputComponent label='Cardholder Name' type='text' placeholder='e.g. Jane Appleseed' func={onInputClick} ></InputComponent>
+        <InputComponent label='Card Number' type='text' placeholder='e.g. 1234 5678 9123 0000' func={onInputClick} ></InputComponent>
+        <InputComponent label='CVC' type='text' placeholder='e.g. 123' func={onInputClick} ></InputComponent>
         <BtnComponent text='Confirm' func={onBtnClick}></BtnComponent>
       </div>
     </div>
