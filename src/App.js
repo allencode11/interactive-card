@@ -1,7 +1,12 @@
 import './App.css';
 import img from './assets/images/text.png';
+import { BtnComponent } from './components/btn/btn.component';
 
 function App() {
+
+  const onBtnClick = () => {
+    console.log('click');
+  }
   return (
     <div className='App'>
       <div className='gradient-img mask'>
@@ -27,6 +32,10 @@ function App() {
           <div className='text'>000</div>
         </div>
         <img src={img} alt='text' className='text-img' />
+      </div>
+
+      <div className='input-data'>
+        <BtnComponent text='Confirm' func={onBtnClick}></BtnComponent>
       </div>
     </div>
   );
