@@ -1,13 +1,146 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Space Grotesk', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    color: white;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.gradient-img {
+    width: 483px;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.shape {
+    position: absolute;
+    width: 854.9px;
+    left: -219px;
+    top: -163px;
+
+    mix-blend-mode: normal;
+    opacity: 0.25;
+}
+
+.mask {
+    position: absolute;
+    width: 483px;
+    top: 0px;
+
+    background: #21092F;
+}
+
+.oval {
+    position: absolute;
+    width: 248px;
+    height: 657px;
+    mix-blend-mode: normal;
+    opacity: 0.85;
+    filter: blur(67.957px);
+    transform: rotate(45deg);
+}
+
+.o1 {
+    left: 309.53px;
+    top: -163px;
+    background: #D53AFF;
+}
+
+.o2 {
+    left: 460.53px;
+    top: -116px;
+    background: #FF834A;
+}
+
+.o3 {
+    left: 245.57px;
+    top: 120.53px;
+    background: #47A2FF;
+}
+
+.card-back {
+    position: absolute;
+    width: 447px;
+    height: 222px;
+    left: 258px;
+    top: 469px;
+    background: linear-gradient(168.73deg, #FFFFFF 5%, #D2D3D9 91.69%);
+    border-radius: 10px;
+    padding-top: 23px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dark-line {
+    width: 447px;
+    height: 54px;
+    background: #2F2F2F;
+}
+
+.gray-line {
+    margin-top: 24px;
+    width: 361px;
+    height: 38px;
+    background: #ADB5BE;
+    border-radius: 4px;
+    position: relative;
+}
+
+.text {
+    position: absolute;
+    height: 18px;
+    left: 86.7%;
+    right: 4.43%;
+    top: calc(50% - 18px/2);
+}
+
+.text-img {
+    width: 186px;
+    height: 26px;
+    margin-top: 33px;
+}
+
+.card-front {
+    position: absolute;
+    width: 447px;
+    height: 245px;
+    left: 164px;
+    top: 187px;
+    background-image: url("./assets/images/front-card.png");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-num {
+    width: 372px;
+    height: 36px;
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: 3.3px;
+    margin-top: 139px;
+}
+
+.card-details {
+    width: 383.14px;
+    height: 18px;
+    margin-top: 25.5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-owner {
+}
+
+.date {
+    text-align: right;
 }

@@ -1,23 +1,33 @@
-import logo from './logo.svg';
 import './App.css';
+import img from './assets/images/text.png';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <div className='gradient-img mask'>
+        <div className='shape'>
+          <div className='oval o1'></div>
+          <div className='oval o2'></div>
+          <div className='oval o3'></div>
+        </div>
+      </div>
+
+      <div className='card-front'>
+        <div className='card-num'>0000 0000 0000 0000</div>
+        <div className='card-details'>
+          <div className='card-owner'>JANE APPLESEED</div>
+          <div className='date'>00/00</div>
+        </div>
+
+      </div>
+
+      <div className='card-back'>
+        <div className='dark-line'></div>
+        <div className='gray-line'>
+          <div className='text'>000</div>
+        </div>
+        <img src={img} alt='text' className='text-img' />
+      </div>
     </div>
   );
 }
