@@ -42,10 +42,16 @@ function App() {
       </div>
 
       <div className='input-data'>
-        <InputComponent label='Cardholder Name' type='text' placeholder='e.g. Jane Appleseed' func={onInputClick} ></InputComponent>
-        <InputComponent label='Card Number' type='text' placeholder='e.g. 1234 5678 9123 0000' func={onInputClick} ></InputComponent>
-        <InputComponent label='CVC' type='text' placeholder='e.g. 123' func={onInputClick} ></InputComponent>
-        <InputDateComponent label='Exp. Date (MM/YY)' placeholder1='MM' func={onInputClick} placeholder2='YY'></InputDateComponent>
+        <InputComponent
+          label='Cardholder Name'
+          placeholder='e.g. Jane Appleseed'
+          func={onInputClick}
+        ></InputComponent>
+        <InputComponent label='Card Number' placeholder='e.g. 1234 5678 9123 0000' func={onInputClick} ></InputComponent>
+        <div className='row'>
+          <InputDateComponent label='Exp. Date (MM/YY)' placeholder1='MM' func={onInputClick} placeholder2='YY'></InputDateComponent>
+          <InputComponent label='CVC' placeholder='e.g. 123' func={onInputClick} ></InputComponent>
+        </div>
         <BtnComponent text='Confirm' func={onBtnClick}></BtnComponent>
       </div>
     </div>

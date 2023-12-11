@@ -145,3 +145,8 @@
     left: 832px;
     top: 275px;
 }
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
