@@ -3,15 +3,36 @@ import img from './assets/images/text.png';
 import { BtnComponent } from './components/btn/btn.component';
 import { InputComponent } from './components/input/input.component';
 import { InputDateComponent } from './components/input-date/input-date.component';
+import {useState} from "react";
+import {FormComponent} from "./components/form/form.component";
 
 function App() {
+  const [cardNum, setCardNum] = useState('0000 0000 0000 0000');
+  const [cardOwner, setCardOwner] = useState('JANE APPLESEED');
+  const [cardExpMonth, setCardExpMonth] = useState('00');
+  const [cardExpYear, setCardExpYear] = useState('00');
+  const [cardCVC, setCardCVC] = useState('000');
+  const [formData, setFormData] = useState({
+    cardNum: '',
+    cardOwner: '',
+    cardCVC: '',
+    cardExpMonth: '',
+    cardExpYear: ''
+  });
 
   const onBtnClick = () => {
-    console.log('click');
+    setCardNum(formData.cardNum);
+    setCardOwner(formData.cardOwner);
+    setCardExpMonth(formData.cardExpMonth);
+    setCardExpYear(formData.cardExpYear);
+    setCardCVC(formData.cardCVC);
   };
 
-  const onInputClick = () => {
-    console.log('click');
+  const onInputChange = (field, value) => {
+    setFormData({
+      ...formData,
+      [field]: value
+    })
   };
 
   return (
@@ -25,10 +46,10 @@ function App() {
       </div>
 
       <div className='card-front'>
-        <div className='card-num'>0000 0000 0000 0000</div>
+        <div className='card-num'>{cardNum}</div>
         <div className='card-details'>
-          <div className='card-owner'>JANE APPLESEED</div>
-          <div className='date'>00/00</div>
+          <div className='card-owner'>{cardOwner}</div>
+          <div className='date'>{cardExpMonth}/{cardExpYear}</div>
         </div>
 
       </div>
@@ -36,24 +57,12 @@ function App() {
       <div className='card-back'>
         <div className='dark-line'></div>
         <div className='gray-line'>
-          <div className='text'>000</div>
+          <div className='text'>{cardCVC}</div>
         </div>
         <img src={img} alt='text' className='text-img' />
       </div>
 
-      <div className='input-data'>
-        <InputComponent
-          label='Cardholder Name'
-          placeholder='e.g. Jane Appleseed'
-          func={onInputClick}
-        ></InputComponent>
-        <InputComponent label='Card Number' placeholder='e.g. 1234 5678 9123 0000' func={onInputClick} ></InputComponent>
-        <div className='row'>
-          <InputDateComponent label='Exp. Date (MM/YY)' placeholder1='MM' func={onInputClick} placeholder2='YY'></InputDateComponent>
-          <InputComponent label='CVC' placeholder='e.g. 123' func={onInputClick} ></InputComponent>
-        </div>
-        <BtnComponent text='Confirm' func={onBtnClick}></BtnComponent>
-      </div>
+      <FormComponent onBtnClick={onBtnClick} onInputChange={onInputChange}></FormComponent>
     </div>
   );
 }
