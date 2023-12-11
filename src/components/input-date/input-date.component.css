@@ -1,0 +1,15 @@
+.input-date {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 170px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.date-input {
+    width: 80px;
+}

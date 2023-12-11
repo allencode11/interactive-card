@@ -2,6 +2,7 @@ import './App.css';
 import img from './assets/images/text.png';
 import { BtnComponent } from './components/btn/btn.component';
 import { InputComponent } from './components/input/input.component';
+import { InputDateComponent } from './components/input-date/input-date.component';
 
 function App() {
 
@@ -44,6 +45,7 @@ function App() {
         <InputComponent label='Cardholder Name' type='text' placeholder='e.g. Jane Appleseed' func={onInputClick} ></InputComponent>
         <InputComponent label='Card Number' type='text' placeholder='e.g. 1234 5678 9123 0000' func={onInputClick} ></InputComponent>
         <InputComponent label='CVC' type='text' placeholder='e.g. 123' func={onInputClick} ></InputComponent>
+        <InputDateComponent label='Exp. Date (MM/YY)' placeholder1='MM' func={onInputClick} placeholder2='YY'></InputDateComponent>
         <BtnComponent text='Confirm' func={onBtnClick}></BtnComponent>
       </div>
     </div>
