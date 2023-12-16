@@ -10,7 +10,7 @@ export const InputDateComponent = ({label, placeholder1, placeholder2, func}) =>
   }
 
   return (
-    <div className='input-date'>
+    <div className='input-date-container'>
       <label>{label}</label>
       <div className='row'>
         <input className='date-input' placeholder={placeholder1} onChange={handleMonthChange} />

@@ -1,4 +1,4 @@
-.input-date {
+.input-date-container {
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -8,4 +8,15 @@
 
 .date-input {
     width: 80px;
+}
+
+@media only screen and (max-width: 1250px) {
+    .input-date-container {
+        width: 152px;
+        margin-right: 11px;
+    }
+
+    .date-input {
+        width: 72px;
+    }
 }
