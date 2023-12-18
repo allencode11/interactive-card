@@ -134,8 +134,14 @@
 }
 
 .row {
+  width: 170px;
   display: flex;
   justify-content: space-between;
+}
+
+.flex-mobile {
+  display: flex;
+  flex-direction: row;
 }
 
 @media only screen and (max-width: 450px) {
@@ -248,13 +254,6 @@
     width: 245.11px;
     height: 12px;
     margin-top: 125px;
-  }
-
-  .input-data {
-    position: static;
-    width: 327px;
-    height: 328px;
-    margin: 91px 24px;
   }
 
   .card-owner, .date {

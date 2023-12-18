@@ -10,7 +10,7 @@
     align-items: center;
     text-transform: none;
     margin-top: 8px;
-
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 450px) {

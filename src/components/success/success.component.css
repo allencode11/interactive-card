@@ -1,0 +1,34 @@
+.success-container {
+    position: static;
+    width: 381px;
+    height: 291px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.success-container-img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 35px;
+}
+
+.success-container-title {
+    font-size: 28px;
+    color: #21092F;
+    line-height: 36px;
+    margin-bottom: 16px;
+}
+
+.success-container-content {
+    font-size: 18px;
+    line-height: 23px;
+    color: #8F8694;
+    margin-bottom: 40px;
+}
+
+/*@media only screen and (max-width: 450px) {*/
+/*    */
+/*}*/
+
