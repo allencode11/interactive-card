@@ -109,13 +109,18 @@
   font-size: 28px;
   line-height: 36px;
   letter-spacing: 3.3px;
-  margin-top: 139px;
+  position: absolute;
+  left: 7.16%;
+  right: 9.62%;
+  top: calc(50% - 36px/2 + 34.5px);
+  font-weight: 500;
+  color: #FFFFFF;
 }
 
 .card-details {
   width: 383.14px;
   height: 18px;
-  margin-top: 25.5px;
+  margin-top: 200.5px;
   display: flex;
   justify-content: space-between;
 }
@@ -133,9 +138,10 @@
   justify-content: space-between;
 }
 
-@media only screen and (max-width: 1250px) {
+@media only screen and (max-width: 450px) {
   .gradient-img {
-    width: 375px;
+    min-width: 375px;
+    width: 100vw;
     height: 240px;
   }
 
@@ -182,8 +188,9 @@
   .card-back {
     width: 266px;
     height: 157px;
-    left: 73px;
-    top: 32px;
+    top: 0;
+    right: 0;
+    transform: translateX(-68%);
     border-radius: 6px;
     padding-top: 0;
   }
@@ -207,6 +214,7 @@
     left: 86.7%;
     right: 4.43%;
     top: calc(50% - 11px/2 - 0.46px);
+    font-weight: bold;
 
   }
 
@@ -215,46 +223,48 @@
   }
 
   .card-front {
-    position: absolute;
-    width: 447px;
-    height: 245px;
-    left: 164px;
-    top: 187px;
-    background-image: url("./assets/images/front-card.png");
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    position: relative;
+    width: 286px;
+    height: 157px;
+    left: 0;
+    bottom: 0;
+    transform: translate(0, -60%);
+    z-index: 1;
   }
 
   .card-num {
-    width: 372px;
-    height: 36px;
-    font-size: 28px;
+    width: 239px;
+    font-size: 18px;
     line-height: 36px;
-    letter-spacing: 3.3px;
-    margin-top: 139px;
+    position: absolute;
+    height: 23px;
+    left: 6.99%;
+    right: 9.44%;
+    top: calc(50% - 23px/2 + 18px);
+    letter-spacing: 2.1px;
   }
 
   .card-details {
-    width: 383.14px;
-    height: 18px;
-    margin-top: 25.5px;
-    display: flex;
-    justify-content: space-between;
+    width: 245.11px;
+    height: 12px;
+    margin-top: 125px;
   }
 
   .input-data {
-    position: absolute;
-    width: 381px;
-    height: 352px;
-    left: 832px;
-    top: 275px;
+    position: static;
+    width: 327px;
+    height: 328px;
+    margin: 91px 24px;
   }
 
-  .row {
+  .card-owner, .date {
+    font-size: 9px;
+  }
+
+  .flex-mobile {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
   }
 
 }

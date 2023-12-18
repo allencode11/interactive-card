@@ -10,7 +10,7 @@
     width: 80px;
 }
 
-@media only screen and (max-width: 1250px) {
+@media only screen and (max-width: 450px) {
     .input-date-container {
         width: 152px;
         margin-right: 11px;

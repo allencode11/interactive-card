@@ -42,27 +42,27 @@ function App() {
         </div>
       </div>
 
-      <div className='cards'>
-        <div className='card-front'>
-          <div className='card-num'>{cardNum}</div>
-          <div className='card-details'>
-            <div className='card-owner'>{cardOwner}</div>
-            <div className='date'>{cardExpMonth}/{cardExpYear}</div>
+      <div className='flex-mobile'>
+        <div className='cards'>
+          <div className='card-front'>
+            <div className='card-num'>{cardNum}</div>
+            <div className='card-details'>
+              <div className='card-owner'>{cardOwner}</div>
+              <div className='date'>{cardExpMonth}/{cardExpYear}</div>
+            </div>
+
           </div>
 
-        </div>
-
-        <div className='card-back'>
-          <div className='dark-line'></div>
-          <div className='gray-line'>
-            <div className='text'>{cardCVC}</div>
+          <div className='card-back'>
+            <div className='dark-line'></div>
+            <div className='gray-line'>
+              <div className='text'>{cardCVC}</div>
+            </div>
+            <img src={img} alt='text' className='text-img' />
           </div>
-          <img src={img} alt='text' className='text-img' />
         </div>
+        <FormComponent onBtnClick={onBtnClick} onInputChange={onInputChange}></FormComponent>
       </div>
-
-
-      <FormComponent onBtnClick={onBtnClick} onInputChange={onInputChange}></FormComponent>
     </div>
   );
 }
