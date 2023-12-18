@@ -5,11 +5,9 @@ import './form.component.css';
 import {useState} from "react";
 import {SuccessComponent} from "../success/success.component";
 
-export const FormComponent = ({onInputChange, onBtnClick }) => {
-  const [success, setSuccess] = useState(false);
+export const FormComponent = ({onInputChange, onBtnClick, success}) => {
 
   const btnClick = () => {
-    setSuccess(true);
     onBtnClick();
   }
   return (
@@ -22,12 +20,21 @@ export const FormComponent = ({onInputChange, onBtnClick }) => {
               label='Cardholder Name'
               placeholder='e.g. Jane Appleseed'
               field='cardOwner'
-              func={onInputChange }
+              func={onInputChange}
             ></InputComponent>
-            <InputComponent label='Card Number' field='cardNum' placeholder='e.g. 1234 5678 9123 0000' func={onInputChange} ></InputComponent>
+            <InputComponent
+              label='Card Number'
+              field='cardNum'
+              placeholder='e.g. 1234 5678 9123 0000'
+              func={onInputChange}
+            ></InputComponent>
             <div className='row'>
               <InputDateComponent label='Exp. Date (MM/YY)' placeholder1='MM' func={onInputChange} placeholder2='YY'></InputDateComponent>
-              <InputComponent label='CVC' field='cardCVC' placeholder='e.g. 123' func={onInputChange} ></InputComponent>
+              <InputComponent
+                label='CVC'
+                field='cardCVC'
+                placeholder='e.g. 123'
+                func={onInputChange} ></InputComponent>
             </div>
             <BtnComponent text='Confirm' func={btnClick}></BtnComponent>
           </div>

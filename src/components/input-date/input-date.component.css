@@ -6,6 +6,12 @@
     margin-right: 20px;
 }
 
+.row-m {
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+
 .date-input {
     width: 80px;
 }
@@ -14,6 +20,10 @@
     .input-date-container {
         width: 152px;
         margin-right: 11px;
+    }
+
+    .row-m {
+        width: 152px;
     }
 
     .date-input {

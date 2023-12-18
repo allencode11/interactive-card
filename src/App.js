@@ -9,6 +9,7 @@ function App() {
   const [cardExpMonth, setCardExpMonth] = useState('00');
   const [cardExpYear, setCardExpYear] = useState('00');
   const [cardCVC, setCardCVC] = useState('000');
+  const [success, setSuccess] = useState(false);
   const [formData, setFormData] = useState({
     cardNum: '',
     cardOwner: '',
@@ -23,6 +24,11 @@ function App() {
     setCardExpMonth(formData.cardExpMonth);
     setCardExpYear(formData.cardExpYear);
     setCardCVC(formData.cardCVC);
+
+    if (formData.cardExpYear !== '' && formData.cardOwner !== '' &&
+    formData.cardExpMonth !== '', formData.cardCVC !== '', formData.cardNum !== '') {
+      setSuccess(true);
+    }
   };
 
   const onInputChange = (field, value) => {
@@ -61,7 +67,7 @@ function App() {
             <img src={img} alt='text' className='text-img' />
           </div>
         </div>
-        <FormComponent onBtnClick={onBtnClick} onInputChange={onInputChange}></FormComponent>
+        <FormComponent onBtnClick={onBtnClick} onInputChange={onInputChange} success={success}></FormComponent>
       </div>
     </div>
   );
